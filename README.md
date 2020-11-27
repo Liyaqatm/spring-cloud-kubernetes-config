@@ -1,4 +1,5 @@
 # Spring Cloud Kubernetes Config Example
+Forked from: https://github.com/TechPrimers/spring-cloud-kubernetes-config-example
 
 ## Versions used
 - Kubernetes 1.16

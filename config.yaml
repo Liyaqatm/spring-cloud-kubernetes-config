@@ -4,5 +4,5 @@ metadata:
   name: config-example
 data:
   application.properties: |-
-    welcome.message=Hello Youtube from app.properties
+    welcome.message=Hi from app.properties
     message=Hi from app.properties

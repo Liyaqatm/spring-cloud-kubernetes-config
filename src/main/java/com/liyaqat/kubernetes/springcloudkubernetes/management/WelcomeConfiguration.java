@@ -1,4 +1,4 @@
-package com.techprimers.kubernetes.springcloudkubernetesconfigexample;
+package com.liyaqat.kubernetes.springcloudkubernetes.management;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class WelcomeConfiguration {
 
-    private String message = "Welcome to TechPrimers";
+    private String message = "Welcome to Our API";
 
     public String getMessage() {
         return message;

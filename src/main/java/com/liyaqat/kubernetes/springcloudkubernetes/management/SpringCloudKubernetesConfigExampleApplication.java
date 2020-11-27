@@ -1,4 +1,4 @@
-package com.techprimers.kubernetes.springcloudkubernetesconfigexample;
+package com.liyaqat.kubernetes.springcloudkubernetes.management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -25,9 +25,46 @@ spec:
       labels:
         app: config-example
     spec:
+      volumes:
+        - name: config-example
+          configMap:
+            name: inventory-config
+            items:
+              - key: application-config.yml
+                path: application-config.yml
       containers:
         - name: config-example
           image: config-example
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
+          volumeMounts:
+            - name: config-example
+              mountPath: /etc/company/config/
+
+---
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  namespace: default
+  name: namespace-reader
+rules:
+  - apiGroups: ["", "extensions", "apps"]
+    resources: ["configmaps", "pods", "services", "endpoints", "secrets"]
+    verbs: ["get", "list", "watch"]
+
+---
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: namespace-reader-binding
+  namespace: default
+subjects:
+  - kind: ServiceAccount
+    name: default
+    apiGroup: ""
+roleRef:
+  kind: Role
+  name: namespace-reader
+  apiGroup: ""

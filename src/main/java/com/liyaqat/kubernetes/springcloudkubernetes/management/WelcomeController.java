@@ -1,4 +1,4 @@
-package com.techprimers.kubernetes.springcloudkubernetesconfigexample;
+package com.liyaqat.kubernetes.springcloudkubernetes.management;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WelcomeController {
 
-    @Value("${message:Welcome to Youtube}")
+    @Value("${message:Welcome}")
     private String message;
 
     @GetMapping

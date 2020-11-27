@@ -11,4 +11,5 @@ deploy:
   kubectl:
     manifests:
       - config.yaml
+      - inventory-config.yaml
       - deploy.yaml
